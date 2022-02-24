@@ -1,6 +1,6 @@
 #include <iostream>
 
-//созание ячеек двумерного динамического массива
+//СЃРѕР·Р°РЅРёРµ СЏС‡РµРµРє РґРІСѓРјРµСЂРЅРѕРіРѕ РґРёРЅР°РјРёС‡РµСЃРєРѕРіРѕ РјР°СЃСЃРёРІР°
 void CreateDinDArr(int ** arr,const int rows,const int cols)
 {
 	for (int i = 0; i < rows; i++)
@@ -8,7 +8,7 @@ void CreateDinDArr(int ** arr,const int rows,const int cols)
 		arr[i] = new int[cols];
 	}
 } 
-//заполнение ячеек двумерного динамического массива рандомными числами
+//Р·Р°РїРѕР»РЅРµРЅРёРµ СЏС‡РµРµРє РґРІСѓРјРµСЂРЅРѕРіРѕ РґРёРЅР°РјРёС‡РµСЃРєРѕРіРѕ РјР°СЃСЃРёРІР° СЂР°РЅРґРѕРјРЅС‹РјРё С‡РёСЃР»Р°РјРё
 void FillDinDArr(int** arr, const int R, const int C)
 {
 	for (int i = 0; i < R; i++)
@@ -19,7 +19,7 @@ void FillDinDArr(int** arr, const int R, const int C)
 		}
 	}
 }
-//вывод на экран двумерного динамического массива
+//РІС‹РІРѕРґ РЅР° СЌРєСЂР°РЅ РґРІСѓРјРµСЂРЅРѕРіРѕ РґРёРЅР°РјРёС‡РµСЃРєРѕРіРѕ РјР°СЃСЃРёРІР°
 void PrintDinDArr(int** arr, const int R, const int C)
 {
 	std::cout << std::endl;
@@ -33,7 +33,8 @@ void PrintDinDArr(int** arr, const int R, const int C)
 		std::cout << std::endl;
 	}
 }
-//удаление двумерного динамического массива
+
+//СѓРґР°Р»РµРЅРёРµ РґРІСѓРјРµСЂРЅРѕРіРѕ РґРёРЅР°РјРёС‡РµСЃРєРѕРіРѕ РјР°СЃСЃРёРІР°
 void DelDinDArr(int** arr, const int R)
 {
 	for (int i = 0; i < R; i++)
@@ -44,7 +45,7 @@ void DelDinDArr(int** arr, const int R)
 }
 
 
-/////Перегрузка для кв. матриц,функция работают также//////
+/////РџРµСЂРµРіСЂСѓР·РєР° РґР»СЏ РєРІ. РјР°С‚СЂРёС†,С„СѓРЅРєС†РёСЏ СЂР°Р±РѕС‚Р°СЋС‚ С‚Р°РєР¶Рµ////////////////////////////////////////
 void CreateDinDArr(int** arr, const int N)
 {
 
@@ -76,14 +77,14 @@ void PrintDinDArr(int** arr, const int N)
 		std::cout << std::endl;
 	}
 }
-////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////
 
-//функция для умножения матриц
+//С„СѓРЅРєС†РёСЏ РґР»СЏ СѓРјРЅРѕР¶РµРЅРёСЏ РјР°С‚СЂРёС†
 void MultiplyMatrix(int** arrA, int** arrB, const int cols1, const int cols2, const int rows1)
 {
 
 	std::cout << "\n";
-	std::cout << "Результат: " << std::endl;
+	std::cout << "ГђГҐГ§ГіГ«ГјГІГ ГІ: " << std::endl;
 	std::cout << "\n";
 
 	int** arrC = new int* [rows1];
@@ -101,10 +102,11 @@ void MultiplyMatrix(int** arrA, int** arrB, const int cols1, const int cols2, co
 		std::cout << "\n";
 	}
 }
-//функция для удаления столбца и строки
+
+//С„СѓРЅРєС†РёСЏ РґР»СЏ СѓРґР°Р»РµРЅРёСЏ СЃС‚РѕР»Р±С†Р° Рё СЃС‚СЂРѕРєРё
 void newMatrix(int** arrA, int **arrANew,int ro,int co,int& size)
 {
-	int DelCol{ 0 }, DelRow{ 0 }; // строка, столбец
+	int DelCol{ 0 }, DelRow{ 0 }; // Г±ГІГ°Г®ГЄГ , Г±ГІГ®Г«ГЎГҐГ¶
 
 	for (int i = 0; i < size-1; i++)
 	{
@@ -121,7 +123,8 @@ void newMatrix(int** arrA, int **arrANew,int ro,int co,int& size)
 		}
 	}
 }
-//функция нахождения определителя
+
+//С„СѓРЅРєС†РёСЏ РЅР°С…РѕР¶РґРµРЅРёСЏ РѕРїСЂРµРґРµР»РёС‚РµР»СЏ
 int Det(int** arrA, int size)
 {
 	int detA{ 0 };
@@ -161,15 +164,15 @@ int Det(int** arrA, int size)
 }
 
 
-//////Задача 1 Умножение матрицы//////
+//////Р—Р°РґР°С‡Р° 1 РЈРјРЅРѕР¶РµРЅРёРµ РјР°С‚СЂРёС†С‹//////
 void numberBer()
 {
 	int rows1{ 0 };
 	int cols1{ 0 };
 
-	std::cout << "Введите количество строк Матрицы A\t: ";
+	std::cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє РњР°С‚СЂРёС†С‹ A\t: ";
 	std::cin >> rows1;
-	std::cout << "Введите количество столбцов Матрицы A\t: ";
+	std::cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚РѕР»Р±С†РѕРІ РњР°С‚СЂРёС†С‹ A\t: ";
 	std::cin >> cols1;
 
 	int rows2{ 0 };
@@ -177,14 +180,14 @@ void numberBer()
 
 
 
-	std::cout << "Введите количество строк Матрицы B\t: ";
+	std::cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє РњР°С‚СЂРёС†С‹ B\t: ";
 	std::cin >> rows2;
-	std::cout << "Введите количество столбцов Матрицы B\t: ";
+	std::cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚РѕР»Р±С†РѕРІ РњР°С‚СЂРёС†С‹ B\t: ";
 	std::cin >> cols2;
 
 	if(rows1!=cols2)
 	{
-		std::cout << "Ошибка!";
+		std::cout << "РћС€РёР±РєР°!";
 	}
 
 	else
@@ -215,11 +218,11 @@ void numberBer()
 }
 //////////////////////////////////////
 
-//////Задача 2 Найти определитель//////
+//////Р—Р°РґР°С‡Р° 2 РќР°Р№С‚Рё РѕРїСЂРµРґРµР»РёС‚РµР»СЊ//////
 void numberIke()
 {
 	int size{ 1 };
-	std::cout << "Введите размерность матрицы: ";
+	std::cout << "Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂРЅРѕСЃС‚СЊ РјР°С‚СЂРёС†С‹: ";
 	std::cin >> size;
 
 	int** arrA = new int* [size];
